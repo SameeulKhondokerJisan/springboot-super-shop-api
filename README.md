@@ -36,13 +36,27 @@ Entity → Repository → Service → Controller
 
 ## ▶ Run Project
 
-1. Clone the repository
-2. Configure MySQL database
-3. Run the Spring Boot application
+1. Create the database:
 
-```
-mvn spring-boot:run
-```
+   ```sql
+   CREATE DATABASE supershop;
+   ```
+
+2. Set your MySQL credentials as environment variables (read by `application.yaml`):
+
+   ```bash
+   export DB_USERNAME=root
+   export DB_PASSWORD=your_mysql_password
+   ```
+
+3. Start the app (needs Maven installed):
+
+   ```bash
+   cd advanced-retail-super-shop
+   mvn spring-boot:run
+   ```
+
+The API runs at `http://localhost:8080`. Creating an order reduces the product's stock and fails if stock is too low.
 
 ## 📌 Author
 

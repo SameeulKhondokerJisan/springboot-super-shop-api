@@ -1,0 +1,11 @@
+# Maven build output
+target/
+
+# IDE and OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Local environment files
+.env
